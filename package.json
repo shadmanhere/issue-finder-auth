@@ -2,11 +2,12 @@
   "name": "issue-finder-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "api/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node ./api/index.js",
+    "dev": "nodemon ./api/index.js"
   },
   "author": "Shadman Ali <shadman.ali@live.co.uk>",
   "license": "MIT",

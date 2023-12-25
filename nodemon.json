@@ -1,5 +1,5 @@
 {
-    "watch": ["./"],
+    "watch": ["api"],
     "ext": "js,json",
     "ignore": ["src/tests"]
   }
