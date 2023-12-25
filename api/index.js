@@ -15,7 +15,7 @@ app.get('/api', (req, res) => {
   res.send('Hello World!');
 })
 
-app.post('/api/github_acess_token', async (req, res) => {
+app.post('/api', async (req, res) => {
   const { code, state } = req.body;
   // const storedState = sessionStorage.getItem('githubOAuthState');
 
