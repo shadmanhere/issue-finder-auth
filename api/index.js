@@ -11,11 +11,11 @@ app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Hello World!');
 })
 
-app.post('/', async (req, res) => {
+app.post('/api/github_acess_token', async (req, res) => {
   const { code, state } = req.body;
   // const storedState = sessionStorage.getItem('githubOAuthState');
 
