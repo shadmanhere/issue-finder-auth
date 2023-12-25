@@ -5,11 +5,15 @@ import * as dotenv from "dotenv"
 dotenv.config();
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+})
 
 app.post('/', async (req, res) => {
   const { code, state } = req.body;
