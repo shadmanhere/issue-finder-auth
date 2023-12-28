@@ -17,11 +17,6 @@ app.get('/api', (req, res) => {
 
 app.post('/api', async (req, res) => {
   const { code, state } = req.body;
-  // const storedState = sessionStorage.getItem('githubOAuthState');
-
-  // if (state !== storedState) {
-  //   return res.status(400).json({ error: 'Invalid state parameter' });
-  // }
 
   const accessTokenResponse = await fetch('https://github.com/login/oauth/access_token', {
     method: 'POST',
@@ -38,7 +33,7 @@ app.post('/api', async (req, res) => {
   });
 
   const accessTokenData = await accessTokenResponse.json();
-  // const accessToken = accessTokenData.access_token;
+
   res.json(accessTokenData);
 });
 
